@@ -5,4 +5,5 @@ const route = express.Router()
 
 route.post("/CreateUser/TakeIdAndPersonalInfo", UserController.TakeIdAndPersonalInfoController )
 
+
 module.exports = route
