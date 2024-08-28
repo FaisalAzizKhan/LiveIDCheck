@@ -9,7 +9,7 @@ const TakeIdAndPersonalInfoController = async (req, res) =>{
                 const newUser = await UserRepo.createNewUser({
                     email: req.body.email,
                     username: req.body.username,
-                    idfileurl: req.body.idfileurl
+                    idfileurl: req.file ? req.file.path : null
                     
                 })
                 return res.status(200).json({message: "User Created Succesfully", User: newUser})
